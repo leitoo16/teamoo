@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pa tu</title>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div class="flower">
+      <div class="text-above">De Tu Noviecito</div>
+      <div class="mid"></div>
+      <div class="Petal1 p1"></div>
+      <div class="Petal1 p2"></div>
+      <div class="Petal1 p3"></div>
+      <div class="Petal1 p4"></div>
+      <div class="Petal2 p1"></div>
+      <div class="Petal2 p2"></div>
+      <div class="Petal2 p3"></div>
+      <div class="Petal2 p4"></div>
+      <div class="Petal3 p1"></div>
+      <div class="Petal3 p2"></div>
+      <div class="Petal3 p3"></div>
+      <div class="Petal3 p4"></div>
+      <div class="text-below">Pa tu</div>
+    </div>
+    <a href="corazon.html" class="btn-neon">
+      <span id="span1"></span>
+      <span id="span2"></span>
+      <span id="span3"></span>
+      <span id="span4"></span>
+      AUN NO ACABO TOCAME DE NUEVO
+    </a>
+  </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="app.js"></script>
+<style>
+  body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+  .flower {
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+    z-index: 99;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    background-color: #000;
+
+    /* Agrega una animación de pulsación */
+    animation: pulsate 2s infinite;
+  }
+
+  .text-above,
+  .text-below {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+  }
+
+  .text-above {
+    top: -60px;
+  }
+
+  .text-below {
+    bottom: -60px;
+  }
+  @keyframes pulsate {
+    0% {
+      transform: scale(1.5);
+    }
+    50% {
+      transform: scale(1.6);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+  .mid {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle, #000, #ff5e00, #000);
+
+    z-index: 4;
+
+    background-size: 5px 5px;
+
+    filter: drop-shadow(0 0 8px #682600);
+  }
+
+  .Petal1 {
+    position: absolute;
+    left: 40px;
+    z-index: 3;
+
+    width: 120px;
+    height: 30px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle, #ff5e00, #ffbb00);
+
+    filter: drop-shadow(0 0 5px #e05200);
+  }
+
+  .Petal1.p1 {
+    transform: rotate(22.5deg);
+  }
+  .Petal1.p2 {
+    transform: rotate(67.5deg);
+  }
+  .Petal1.p3 {
+    transform: rotate(110.5deg);
+  }
+  .Petal1.p4 {
+    transform: rotate(157.5deg);
+  }
+
+  .Petal2 {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+
+    width: 200px;
+    height: 40px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle, #ff5e00, #fbd702);
+
+    filter: drop-shadow(0 0 5px #e05200);
+  }
+
+  .Petal2.p2 {
+    transform: rotate(90deg);
+  }
+  .Petal2.p3 {
+    transform: rotate(45deg);
+  }
+
+  .Petal2.p4 {
+    transform: rotate(135deg);
+  }
+
+  .Petal3 {
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+
+    width: 200px;
+    height: 40px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle, #ff5e00, #fbd702);
+
+    filter: drop-shadow(0 0 2px #fbd702);
+  }
+
+  .Petal3.p1 {
+    transform: rotate(22.5deg);
+  }
+  .Petal3.p2 {
+    transform: rotate(67.5deg);
+  }
+  .Petal3.p3 {
+    transform: rotate(110.5deg);
+  }
+  .Petal3.p4 {
+    transform: rotate(157.5deg);
+  }
+  .btn-neon {
+    z-index: 100;
+    position: absolute;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    top: 600px;
+  }
+  .btn-neon:hover {
+    background: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 1s;
+  }
+  .btn-neon span {
+    position: absolute;
+    display: block;
+  }
+  #span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #a945c7);
+  }
+  .btn-neon:hover #span1 {
+    left: 100%;
+    transition: 1s;
+  }
+  #span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #a945c7);
+  }
+  .btn-neon:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+  #span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #a945c7);
+  }
+  .btn-neon:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+  #span4 {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #a945c7);
+  }
+  .btn-neon:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }
+</style>
+
+</style>

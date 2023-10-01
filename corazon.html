@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sexotilin</title>
+  </head>
+  <body>
+    <div class="text-above">TE AMO MUCHO</div>
+    <canvas id="canvas" width="2500" height="1000"></canvas>
+  </body>
+</html>
+
+<script src="script.js"></script>
+
+<style>
+  body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #canvas {
+    z-index: -1;
+  }
+  .text-above {
+    z-index: 99;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+  }
+</style>
